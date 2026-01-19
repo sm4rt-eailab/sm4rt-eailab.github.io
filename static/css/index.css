@@ -751,3 +751,109 @@ a:focus {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 3D Flow Visualization Component (Themed) --- */
+/* Container Layout */
+.viz-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto;
+    font-family: sans-serif;
+}
+
+/* THE SINGLE CARD: Shadows and Rounded Corners applied here */
+.viz-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* The Grid: 3 Columns */
+.viz-grid {
+    display: grid;
+    /* 1fr for images, 1.2fr for models. 
+       Adjust these ratios if you want models wider/narrower 
+    */
+    grid-template-columns: 1fr 1.2fr 1.2fr;
+    gap: 20px;
+    align-items: stretch; /* Crucial: Stretches all columns to same height */
+}
+
+/* --- Left Column: Images --- */
+.col-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes images to top/bottom edges if needed */
+    gap: 20px; /* Space between View 1 and View 2 */
+}
+
+.img-block {
+    display: flex;
+    flex-direction: column;
+    /* This ensures the image block doesn't force the grid row to explode in height */
+    min-height: 0; 
+}
+
+.img-block img {
+    width: 100%;       /* Full width of the column */
+    height: auto;      /* Aspect ratio preserved strictly */
+    display: block;
+    border-radius: 6px;
+}
+
+/* --- Right Columns: Models --- */
+.col-model {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Fill the grid cell height */
+}
+
+.model-wrapper {
+    flex-grow: 1; /* Takes up all available height matching the images column */
+    background-color: #1e1e1e; /* Dark background as requested */
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%; /* Fills the .model-wrapper completely */
+    --poster-color: #1e1e1e;
+}
+
+/* --- Shared Label Styling --- */
+.label-text {
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 600;
+    color: #444;
+    font-size: 0.95rem;
+    background: #fff; /* Ensure label sits on white background */
+}
+
+
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .viz-grid {
+        grid-template-columns: 1fr; /* Stack everything vertically */
+    }
+    
+    .model-wrapper {
+        height: 350px; /* Fixed height for models on mobile */
+    }
+}

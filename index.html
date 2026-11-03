@@ -4,30 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="VTdUqMgTNfDFgAWYgaLvPb4zWuYiHTVJO05DbUV4jkw" />
-  
+  <script>document.documentElement.classList.add('js');</script>
+
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
   <meta name="title" content="SM4RT: Cascaded Feed-forward Model for 4D Reconstruction">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="We introduce SM4RT, a multi-task cascade feed-forward model for dynamic scene reconstruction from RGB videos. SM4RT performs geometry reconstruction and object flow estimation from image pairs via first recovering 3D geometry and then bootstrapping motion estimation from the predicted structure.">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="4D reconstruction, 3D reconstruction, scene flow, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
+  <meta name="keywords" content="4D reconstruction, 3D reconstruction, scene flow, object flow, dynamic scenes, feed-forward, computer vision, BMVC 2026">
   <meta name="author" content="Pang-Chi Lo, Jhao-Syun Lai, Tsung-Wei Ke">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
   <meta property="og:site_name" content="Embodied AI Lab, National Taiwan University">
-  <!-- TODO: Same as paper title above -->
   <meta property="og:title" content="SM4RT: Cascaded Feed-forward Model for 4D Reconstruction">
-  <!-- TODO: Same as description above -->
   <meta property="og:description" content="We introduce SM4RT, a multi-task cascade feed-forward model for dynamic scene reconstruction from RGB videos. SM4RT performs geometry reconstruction and object flow estimation from image pairs via first recovering 3D geometry and then bootstrapping motion estimation from the predicted structure.">
-  <!-- TODO: Replace with your actual website URL -->
   <meta property="og:url" content="https://sm4rt-eailab.github.io/">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
   <meta property="og:image" content="https://sm4rt-eailab.github.io/static/images/teaser.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -40,15 +32,8 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
   <meta name="twitter:title" content="SM4RT: Cascaded Feed-forward Model for 4D Reconstruction">
-  <!-- TODO: Same as description above -->
   <meta name="twitter:description" content="We introduce SM4RT, a multi-task cascade feed-forward model for dynamic scene reconstruction from RGB videos. SM4RT performs geometry reconstruction and object flow estimation from image pairs via first recovering 3D geometry and then bootstrapping motion estimation from the predicted structure.">
-  <!-- TODO: Same as social preview image above -->
   <meta name="twitter:image" content="https://sm4rt-eailab.github.io/static/images/teaser.png">
   <meta name="twitter:image:alt" content="SM4RT: Cascaded Feed-forward Model for 4D Reconstruction - Project Page">
 
@@ -58,60 +43,30 @@
   <meta name="citation_author" content="Lai, Jhao-Syun">
   <meta name="citation_author" content="Ke, Tsung-Wei">
   <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="citation_conference_title" content="British Machine Vision Conference (BMVC)">
+
+  <meta name="theme-color" content="#070b14">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
-
-  <!-- TODO: Replace with your paper title and authors -->
   <title>SM4RT: Cascaded Feed-forward Model for 4D Reconstruction</title>
-  
-  <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&family=STIX+Two+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="preload" href="static/data/scenes/k26_fwd.bin" as="fetch" type="application/octet-stream" crossorigin>
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
+
   <script defer src="static/js/index.js"></script>
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-  
+  <script defer src="static/js/pointflow.js"></script>
+  <script defer src="static/js/hero4d.js"></script>
+  <script defer src="static/js/explorer.js"></script>
+  <script defer src="static/js/motion.js"></script>
+  <script defer src="static/js/method.js"></script>
+  <script defer src="static/js/rope.js"></script>
+  <script defer src="static/js/chamfer.js"></script>
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
@@ -120,849 +75,417 @@
     "headline": "SM4RT: Cascaded Feed-forward Model for 4D Reconstruction",
     "description": "We introduce SM4RT, a multi-task cascade feed-forward model for dynamic scene reconstruction from RGB videos. SM4RT performs geometry reconstruction and object flow estimation from image pairs via first recovering 3D geometry and then bootstrapping motion estimation from the predicted structure.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "Pang-Chi Lo",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "Carnegie Mellon University"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Jhao-Syun Lai",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "National Taiwan University"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Tsung-Wei Ke",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "National Taiwan University"
-        }
-      }
+      { "@type": "Person", "name": "Pang-Chi Lo", "affiliation": { "@type": "Organization", "name": "Carnegie Mellon University" } },
+      { "@type": "Person", "name": "Jhao-Syun Lai", "affiliation": { "@type": "Organization", "name": "National Taiwan University" } },
+      { "@type": "Person", "name": "Tsung-Wei Ke", "affiliation": { "@type": "Organization", "name": "National Taiwan University" } }
     ],
     "datePublished": "2026-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
+    "publisher": { "@type": "Organization", "name": "British Machine Vision Conference (BMVC)" },
     "url": "https://sm4rt-eailab.github.io/",
     "image": "https://sm4rt-eailab.github.io/static/images/teaser.png",
-    "keywords": ["4D reconstruction", "3D reconstruction", "scene flow", "machine learning", "computer vision", "AI"],
+    "video": {
+      "@type": "VideoObject",
+      "name": "SM4RT overview video",
+      "description": "Intro video for SM4RT: Cascaded Feed-forward Model for 4D Reconstruction (BMVC 2026).",
+      "thumbnailUrl": "https://sm4rt-eailab.github.io/static/videos/SM4RT_intro_poster.jpg",
+      "contentUrl": "https://sm4rt-eailab.github.io/static/videos/SM4RT_intro.mp4",
+      "uploadDate": "2026-10-30",
+      "duration": "PT2M58S"
+    },
+    "keywords": ["4D reconstruction", "3D reconstruction", "scene flow", "object flow", "computer vision"],
     "abstract": "We introduce SM4RT, a multi-task cascade feed-forward model for dynamic scene reconstruction from RGB videos. While existing feed-forward approaches typically address geometry reconstruction and motion estimation separately -- and often predict motions in a single coordinate frame that must account for camera movement -- SM4RT solves these tasks sequentially by first reconstructing 3D geometry and then bootstrapping motion estimation from the predicted structure. By expressing each pixel's 3D motion in its corresponding camera frame, SM4RT reduces ambiguity arising from camera motion. To address the sparsity of real-world motion labels, SM4RT further incorporates a weakly supervised loss that regularizes unlabeled point motions using labeled point positions at the other time step. We evaluate motion estimation on three dynamic-scene datasets -- Kubric, Waymo, and Point Odyssey -- and SM4RT consistently outperforms all baselines across metrics. We additionally benchmark geometry reconstruction on five dynamic scene datasets and show that SM4RT achieves competitive performance with state-of-the-art methods. Overall, our unified framework demonstrates that combining geometry reconstruction and motion estimation in a cascade not only avoids performance trade-offs but also enhances motion estimation through improved geometric reasoning.",
-    "citation": "BIBTEX_CITATION_HERE",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "4D RECONSTRUCTION"
-      },
-      {
-        "@type": "Thing", 
-        "name": "COMPUTER VISION"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Embodied AI Lab, National Taiwan University",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+    "about": [ { "@type": "Thing", "name": "4D Reconstruction" }, { "@type": "Thing", "name": "Computer Vision" } ]
   }
   </script>
 </head>
 <body>
 
+<!-- ============================================================ nav -->
+<nav class="topnav" id="topnav" aria-label="Sections">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top" aria-label="Back to top"><span class="wordmark">SM4RT</span></a>
+    <div class="nav-links">
+      <a href="#overview">Overview</a>
+      <a href="#results">Results</a>
+      <a href="#method">Method</a>
+      <a href="#citation">Cite</a>
+    </div>
+    <div class="more-works-container">
+      <button class="more-works-btn" onclick="toggleMoreWorks()" title="View more works from our lab" aria-haspopup="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6.5L4.6 18.4A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.4-2.6L14 9.5V3"/><path d="M7.5 15h9"/></svg>
+        More works
+        <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="more-works-dropdown" id="moreWorksDropdown">
+        <div class="dropdown-header">
+          <h4>More works from our lab</h4>
+          <button class="close-btn" onclick="toggleMoreWorks()" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        </div>
+        <div class="works-list">
+          <a href="https://arxiv.org/abs/2510.08475" class="work-item" target="_blank" rel="noopener">
+            <div class="work-info">
+              <h5>DexMan: Learning Bimanual Dexterous Manipulation from Human and Generated Videos</h5>
+              <p>We present DexMan, an automated framework that converts human visual demonstrations into bimanual dexterous manipulation skills for humanoid robots in simulation.</p>
+              <span class="work-venue">Preprint on arXiv</span>
+            </div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <a href="https://arxiv.org/abs/2603.13395" class="work-item" target="_blank" rel="noopener">
+            <div class="work-info">
+              <h5>COT-FM: Cluster-wise Optimal Transport Flow Matching</h5>
+              <p>We introduce COT-FM, a general framework that reshapes the probability path in Flow Matching (FM) to achieve faster and more reliable generation.</p>
+              <span class="work-venue">CVPR 2026</span>
+            </div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
+<!-- ============================================================ hero -->
+<header class="hero" id="top">
+  <canvas class="hero-canvas" id="hero-canvas" aria-label="Live 3D render of an SM4RT prediction: the point map of a Kubric-F scene with its predicted object flow"></canvas>
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <div class="venue-pill"><span class="dot"></span>BMVC 2026</div>
+    <h1 class="hero-title">
+      <span class="wordmark">SM4RT</span>
+      <span class="sub">Cascaded Feed-forward Model for 4D Reconstruction</span>
+    </h1>
+    <p class="hero-hook">From two video frames, one feed-forward pass recovers where every pixel is in 3D and how it moves.</p>
+    <div class="authors">
+      <span><a href="https://pcseanlo.github.io/" target="_blank" rel="noopener">Pang-Chi Lo</a><sup>1</sup></span>
+      <span><a href="" target="_blank" rel="noopener">Jhao-Syun Lai</a><sup>2</sup></span>
+      <span><a href="https://twke18.github.io/" target="_blank" rel="noopener">Tsung-Wei Ke</a><sup>2</sup></span>
+    </div>
+    <div class="affils">
+      <span><sup>1</sup>Robotics Institute, Carnegie Mellon University</span>
+      <span><sup>2</sup>Embodied AI Lab, National Taiwan University</span>
+    </div>
+    <div class="logos">
+      <img class="cmu" src="static/images/logos/cmu.png" alt="Carnegie Mellon University">
+      <img class="ntu" src="static/images/logos/ntu_white.png" alt="National Taiwan University">
+    </div>
+    <div class="hero-links">
+      <!-- TODO: add the paper and arXiv links -->
+      <a class="btn" href="" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+        Paper
+      </a>
+      <a class="btn" href="" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4l14 16M19 4 12.5 11.5M5 20l4.5-5"/></svg>
+        arXiv
+      </a>
+      <a class="btn primary" href="#overview">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+        Video
+      </a>
+      <!-- TODO: add the GitHub repository link -->
+      <a class="btn is-disabled" href="" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+        Code (coming soon)
+      </a>
+    </div>
+  </div>
+  <div class="hero-hud" id="hero-hud">
+    <span class="hud-live"><i></i>Live SM4RT prediction · Kubric-F</span>
+    <span class="hud-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg>Drag to orbit</span>
+    <a class="hud-link" href="#results">Explore all 10 scenes<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+  </div>
+  <a class="scroll-cue" href="#overview" aria-label="Scroll to the overview"></a>
+</header>
+
+<main id="main-content">
+
+<!-- ============================================================ overview: video + TL;DR + abstract -->
+<section class="section" id="overview">
+  <div class="wrap wide">
+    <div class="ov-grid">
+      <figure class="video-shell reveal">
+        <video id="intro-video" controls playsinline preload="metadata" poster="static/videos/SM4RT_intro_poster.jpg">
+          <source src="static/videos/SM4RT_intro.mp4" type="video/mp4">
+          Your browser does not support HTML5 video. <a href="static/videos/SM4RT_intro.mp4">Download the video</a>.
+        </video>
+        <figcaption>Overview video · 2:58 · no audio</figcaption>
+      </figure>
+      <div class="tldr reveal" style="--d:.08s">
+        <p class="kicker">TL;DR</p>
+        <p class="tldr-lead">Reconstruct <span class="g">geometry</span> first, then predict each pixel's <span class="o">motion</span> in its own camera frame.</p>
+        <ol class="contribs">
+          <li><a href="#m-flow"><span><b>Object flow</b> as the motion target. Static points are exactly zero, so there is no camera pose to infer.</span></a></li>
+          <li><a href="#m-arch"><span><b>A geometry-first cascade.</b> The motion decoder reuses DUSt3R's tokens and attends in 3D through 3D RoPE.</span></a></li>
+          <li><a href="#m-train"><span><b>A voxel Chamfer loss</b> that gives unlabelled points a training signal.</span></a></li>
+        </ol>
+        <div class="kpis">
+          <div><b>−35%</b><span>object-flow error<br>Waymo</span></div>
+          <div><b>−45%</b><span>object-flow error<br>Kubric-F</span></div>
+          <div><b>4.5×</b><span>lower rotation error<br>Kubric-F</span></div>
+        </div>
+        <p class="note">Compared with the best prior method.</p>
+      </div>
+    </div>
+
+    <div class="abstract reveal" id="abstract">
+      <h3>Abstract</h3>
+      <p>
+        We introduce SM4RT, a multi-task cascade feed-forward model for dynamic scene reconstruction from RGB videos. While existing feed-forward approaches typically address geometry reconstruction and motion estimation separately -- and often predict motions in a single coordinate frame that must account for camera movement -- SM4RT solves these tasks sequentially by first reconstructing 3D geometry and then bootstrapping motion estimation from the predicted structure. By expressing each pixel's 3D motion in its corresponding camera frame, SM4RT reduces ambiguity arising from camera motion. To address the sparsity of real-world motion labels, SM4RT further incorporates a weakly supervised loss that regularizes unlabeled point motions using labeled point positions at the other time step. We evaluate motion estimation on three dynamic-scene datasets -- Kubric, Waymo, and Point Odyssey -- and SM4RT achieves the best performance on most metrics compared with prior baselines. We additionally benchmark geometry reconstruction on five dynamic scene datasets and show that SM4RT achieves competitive performance with state-of-the-art methods. Overall, our unified framework demonstrates that combining geometry reconstruction and motion estimation in a cascade not only avoids performance trade-offs but also enhances motion estimation through improved geometric reasoning.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ results explorer -->
+<section class="section alt" id="results">
+  <div class="wrap wide">
+    <div class="sec-head reveal">
+      <p class="kicker">Results</p>
+      <h2>Explore the predictions in 4D</h2>
+      <p class="lede">Each scene is a single SM4RT forward pass on two frames: the source frame's point map and its predicted object flow. Scrub through time, switch the direction, or colour points by how far they move.</p>
+    </div>
+
+    <div class="picker reveal" id="scene-picker" role="tablist" aria-label="Scenes"></div>
+
+    <div class="explorer card reveal" id="explorer" data-colour="image">
+      <div class="ex-stage">
+        <canvas id="ex-canvas" aria-label="Interactive 3D view of the selected SM4RT prediction"></canvas>
+        <div class="ex-info"><b id="ex-ds">Waymo</b><span id="ex-note"></span><span id="ex-meta"></span></div>
+        <div class="ex-legend" aria-hidden="true"><span><i class="st"></i>static</span><span><i class="ramp"></i>moving · small → large</span></div>
+        <div class="ex-tools">
+          <button id="ex-input" title="Input camera view" aria-label="Input camera view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="13.5" rx="2.5"/><path d="M8.5 7 10 4.2h4L15.5 7"/><circle cx="12" cy="13.6" r="3.7"/></svg></button>
+          <button id="ex-home" title="Reset view" aria-label="Reset view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button>
+          <button id="ex-full" title="Fullscreen" aria-label="Fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+        </div>
+        <div class="ex-hint">drag to orbit · scroll or pinch to zoom · double-click to reset</div>
+        <div class="ex-loading" aria-hidden="true"><span class="spin"></span></div>
+        <p class="ex-fallback">Interactive 3D needs WebGL, which is not available in this browser. The point clouds can still be downloaded as .glb files.</p>
+      </div>
+      <div class="ex-side">
+        <figure class="ex-frame" id="ex-f1"><img alt="Input frame 1"><figcaption>Frame 1 <span class="m">I₁</span><span class="src-tag">source</span></figcaption></figure>
+        <figure class="ex-frame" id="ex-f2"><img alt="Input frame 2"><figcaption>Frame 2 <span class="m">I₂</span><span class="src-tag">source</span></figcaption></figure>
+        <a class="ex-dl" id="ex-dl" href="static/visualizations/w74/forward.glb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download .glb</a>
+      </div>
+      <div class="ex-bar">
+        <button class="play-btn" id="ex-play" aria-label="Pause">
+          <svg class="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+          <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
         </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/2510.08475" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>DexMan: Learning Bimanual Dexterous Manipulation from Human and Generated Videos</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>We present DexMan, an automated framework that converts human visual demonstrations into bimanual dexterous manipulation skills for humanoid robots in simulation.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Preprint on Arxiv</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/2603.13395" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>COT-FM: Cluster-wise Optimal Transport Flow Matching</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>We introduce COT-FM, a general framework that reshapes the probability path in Flow Matching (FM) to achieve faster and more reliable generation.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">CVPR 2026</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
+        <div class="ex-time"><span class="m" id="ex-ta">t₁</span><input class="range" type="range" id="ex-time" min="0" max="1000" value="0" aria-label="Time between the two frames"><span class="m" id="ex-tb">t₂</span></div>
+        <span class="seg" id="ex-dir" role="group" aria-label="Direction"><button data-v="fwd" class="on" aria-pressed="true">Frame 1 → 2</button><button data-v="bwd" aria-pressed="false">Frame 2 → 1</button></span>
+        <span class="seg" id="ex-col" role="group" aria-label="Colour points by"><button data-v="image" class="on" aria-pressed="true">Image</button><button data-v="motion" aria-pressed="false">Motion</button></span>
+        <button class="toggle on" id="ex-trails" aria-pressed="true">Trails</button>
       </div>
     </div>
+    <p class="res-note reveal">Point maps and flow are up to scale, as in DUSt3R. <b>Frame 1 → 2</b> moves frame 1's points to <span class="m">t₂</span> in camera 1's frame. <b>Frame 2 → 1</b> moves frame 2's points back to <span class="m">t₁</span> in camera 2's frame, from a second pass with the inputs swapped.</p>
   </div>
+</section>
 
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">SM4RT: Cascaded Feed-forward Model for 4D Reconstruction</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="https://pcseanlo.github.io/" target="_blank">Pang-Chi Lo</a><sup>1</sup>,</span>
-                <span class="author-block">
-                  <a href="" target="_blank">Jhao-Syun Lai</a><sup>2</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://twke18.github.io/" target="_blank">Tsung-Wei Ke</a><sup>2</sup>
-                  </span>
-                  </div>
+<!-- ============================================================ method -->
+<section class="section" id="method">
+  <div class="wrap wide">
+    <div class="sec-head reveal">
+      <p class="kicker">Method</p>
+      <h2><span class="g">Geometry</span> first, then <span class="o">motion</span></h2>
+      <p class="lede">SM4RT is a multi-task cascade built on DUSt3R. It reconstructs dense 3D geometry from two frames, then estimates motion from that geometry, and it writes motion as object flow so camera motion never enters the target.</p>
+    </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block"><sup>1</sup>Carnegie Mellon University, <sup>2</sup>National Taiwan University</span>
-                    <br/>
-                    <span class="author-block"><br>BMVC 2026</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
-                  </div>
+    <!-- 1 · motion target -->
+    <div class="mblock" id="m-flow">
+      <div class="mtext reveal">
+        <h3><span class="mi">1</span>Motion target: object flow</h3>
+        <p>Let <span class="m">P₁(t, π)</span> be the 3D positions of frame 1's pixels at time <span class="m">t</span>, in camera frame <span class="m">π</span>. Their motion from <span class="m">t₁</span> to <span class="m">t₂</span> can be written in three ways:</p>
+        <div class="defs" id="flow-defs" role="group" aria-label="Motion definitions">
+          <button class="def" data-mode="scene"><span class="dn">Scene flow</span><span class="m">P₁(t₂, π₂) − P₁(t₁, π₁)</span><span class="dd">object + camera motion</span></button>
+          <button class="def" data-mode="cross"><span class="dn">Cross-frame object flow</span><span class="m">P₁(t₂, π₂) − P₁(t₁, π₂)</span><span class="dd">needs the relative pose</span></button>
+          <button class="def ours" data-mode="object"><span class="dn">Object flow <em>· SM4RT</em></span><span class="m">P₁(t₂, π₁) − P₁(t₁, π₁)</span><span class="dd">static points = 0</span></button>
+        </div>
+        <p>DUSt3R-style dynamic models (MonST3R, DPM, DynaDUSt3R) express both frames in camera 1, so frame 2's motion becomes cross-frame flow and the pose has to be inferred implicitly. SM4RT predicts object flow for each frame in its own camera. Static points are exactly zero, so a motion mask comes for free, and the static points' geometry gives the relative camera pose (PnP + RANSAC).</p>
+        <div class="chips">
+          <span class="chip o"><span class="k">Ablation</span><span><b>2.1×</b> lower error on static points than a scene-flow target <span class="s">· Point Odyssey</span></span></span>
+          <span class="chip c"><span class="k">Pose</span><span><b>4.5×</b> lower rotation error than MonST3R <span class="s">· Kubric-F</span></span></span>
+        </div>
+      </div>
+      <figure class="flowfig card reveal" style="--d:.08s">
+        <svg id="flow-svg" viewBox="0 0 640 420" role="img" aria-label="Top-down toy scene: two cameras, static points and a moving car, with the regression target of each point drawn as an arrow"></svg>
+        <figcaption>
+          <div class="flow-ctrl">
+            <label class="slider"><span>Camera motion</span><input class="range" type="range" id="flow-cam" min="0" max="100" value="100"></label>
+            <span class="read" id="flow-read"></span>
+          </div>
+          <p class="fnote" id="flow-note" aria-live="polite"></p>
+          <div class="legend">
+            <span><i class="fill" style="--c:#8193ae"></i>static point</span>
+            <span><i class="fill" style="--c:#ff794e"></i>car point</span>
+            <span><i class="arrow" style="--c:#e8b93b"></i>target on a static point</span>
+            <span><i class="ring" style="--c:#eef2f8"></i>target = 0</span>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                      <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="ai ai-arxiv"></i>
-                        </span>
-                        <span>arXiv</span>
-                      </a>
-                    </span>
+    <!-- 2 · architecture -->
+    <div class="mblock full" id="m-arch">
+      <div class="mtext reveal">
+        <h3><span class="mi">2</span>Architecture: a two-stage cascade</h3>
+        <p>Choose a component to see what it does. Swap the input order to get frame 2's motion from the same weights.</p>
+      </div>
+      <div class="arch card reveal" id="arch">
+        <div class="arch-top">
+          <div class="tabs" id="arch-tabs" role="tablist" aria-label="Components">
+            <button data-part="all" role="tab">Overview</button>
+            <button data-part="inputs" role="tab">Inputs</button>
+            <button data-part="geometry" role="tab"><i style="--c:var(--geom)"></i>Geometry</button>
+            <button data-part="rope" role="tab"><i style="--c:var(--geom)"></i>3D RoPE</button>
+            <button data-part="motion" role="tab"><i style="--c:var(--motion)"></i>Motion</button>
+          </div>
+          <span class="seg" id="arch-order" role="group" aria-label="Input order"><button data-v="0" class="on" aria-pressed="true">Input (<span class="m">I₁, I₂</span>)</button><button data-v="1" aria-pressed="false">Swapped (<span class="m">I₂, I₁</span>)</button></span>
+        </div>
+        <div class="arch-scroll">
+          <svg class="arch-svg" id="arch-svg" viewBox="0 0 1600 640" role="img" aria-label="SM4RT architecture: a DUSt3R geometry stage feeds a cascaded motion stage"></svg>
+        </div>
+        <noscript><img src="static/images/method.png" alt="SM4RT architecture"></noscript>
+        <div class="arch-detail" id="arch-detail" aria-live="polite"></div>
+      </div>
+    </div>
 
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+    <!-- 3 · 3D RoPE -->
+    <div class="mblock rope-block" id="m-rope">
+      <div class="mtext reveal">
+        <h3><span class="mi">3</span>3D RoPE: attention follows 3D distance</h3>
+        <p>To estimate motion, the decoder must know which pixels lie close together in 3D. Each token's position is the mean of its patch's predicted 3D points. Rotary embeddings of these positions bias attention towards tokens that are near in 3D, as in Lepard and 3D Diffuser Actor.</p>
+        <p>Hover over or tap a patch. With image positions, its neighbourhood bleeds into the floor behind the object. With predicted 3D positions, it stays on the object.</p>
+        <div class="chips"><span class="chip g"><span class="k">Ablation</span><span>2D instead of 3D positions: <b>6.5×</b> higher object-flow error <span class="s">· Waymo</span></span></span></div>
+      </div>
+      <div class="reveal" style="--d:.08s">
+        <div class="rope" id="rope-widget">
+          <figure class="rope-panel card">
+            <figcaption>2D RoPE <span class="s">· neighbours in the image</span></figcaption>
+            <canvas id="rope-2d" aria-label="Image tokens on a 16 by 16 grid; the query's 2D neighbours are highlighted"></canvas>
+          </figure>
+          <figure class="rope-panel card ours">
+            <figcaption>3D RoPE · SM4RT <span class="s">· neighbours in 3D</span></figcaption>
+            <canvas id="rope-3d" aria-label="The same tokens lifted to their predicted 3D positions; the query's 3D neighbours are highlighted"></canvas>
+          </figure>
+        </div>
+        <div class="rope-bar">
+          <span class="hint">Drag the 3D view to orbit</span>
+          <span class="seg" id="rope-lift" role="group" aria-label="Token positions">
+            <button data-v="0">Image plane</button><button data-v="1" class="on">Predicted 3D</button>
+          </span>
+        </div>
+        <p class="res-note">Illustration on SM4RT's predicted point map (Kubric-F): nearest neighbours by image distance (left) and by 3D distance (right).</p>
+      </div>
+    </div>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
+    <!-- 4 · training -->
+    <div class="mblock full" id="m-train">
+      <div class="mtext reveal">
+        <h3><span class="mi">4</span>Training with sparse motion labels</h3>
+        <p>Real-world motion labels are sparse. On Waymo, for example, they come from LiDAR points and 3D boxes. For an input pair, SM4RT minimises</p>
+      </div>
+      <div class="loss card reveal">
+        <p class="eq"><span>ℒ</span> = <span class="g">ℒ<sub>conf</sub>(<i>P</i><sub>1</sub>) + ℒ<sub>conf</sub>(<i>P</i><sub>2</sub>)</span> + <span class="o">ℒ<sub>conf</sub>(<i>F</i><sub>1</sub>)</span> + <span class="s">ℒ<sub>SD</sub></span> + <span class="l"><i>λ</i>(<i>t</i>) ℒ<sub>CD</sub></span></p>
+        <div class="terms">
+          <div class="term" style="--c:var(--geom)"><span class="tk">ℒ<sub>conf</sub></span><p>DUSt3R's confidence-weighted regression, applied to labelled pixels only, for both point maps and the flow. All predictions share one scale factor <span class="m">g</span>, so geometry and motion stay consistent.</p></div>
+          <div class="term" style="--c:var(--label)"><span class="tk">ℒ<sub>CD</sub></span><p>Weakly supervised voxel Chamfer loss. It moves every pixel of frame 1 by its predicted flow and compares <span class="m">P₁ + F₁</span> with frame 2's ground-truth point map <span class="m">P̃₂(t₂, π₁)</span>, by nearest neighbours in both directions within each voxel. Pixels without motion labels get a signal too, and gradients reach both <span class="m">P₁</span> and <span class="m">F₁</span>.</p></div>
+          <div class="term" style="--c:var(--static)"><span class="tk">ℒ<sub>SD</sub></span><p>EMA self-distillation on static pixels. An exponential-moving-average teacher keeps the pretrained static geometry while the model learns motion.</p></div>
+          <div class="term" style="--c:var(--motion)"><span class="tk"><i>θ</i> ← <i>λθ</i> + (1−<i>λ</i>)<i>θ</i><sub>init</sub></span><p>Shrink-and-perturb on the flow head, which is initialised from the depth head. Fresh weights are mixed in at scheduled steps, so the head can leave the static prior.</p></div>
+        </div>
+      </div>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code (Coming Soon)</span>
-                  </a>
-                </span>
-            </div>
+      <div class="chamfer card reveal" id="chamfer-widget">
+        <div class="chamfer-top">
+          <div class="chamfer-intro">
+            <h4>Inside the voxel Chamfer loss</h4>
+            <p class="fnote">A toy scene seen from above, at <span class="m">t₂</span> in camera 1's frame. Rings are all of frame 1's pixels moved by their predicted flow, <span class="m">P₁ + F₁</span>. Dots are frame 2's ground-truth points, <span class="m">P̃₂(t₂, π₁)</span>. Only three car pixels have motion labels (filled rings), so the rest of the car starts out smeared. No correspondences are needed. Inside each voxel, every ring is pulled to its nearest dot and every dot pulls its nearest ring. A voxel that holds only rings or only dots is skipped: that surface is seen in one frame only, because of occlusion or camera motion.</p>
+          </div>
+          <span class="seg" id="chamfer-mode" role="group" aria-label="Nearest-neighbour search"><button data-v="voxel" class="on" aria-pressed="true">Within voxels · SM4RT</button><button data-v="global" aria-pressed="false">Global</button></span>
+        </div>
+        <div class="legend">
+          <span><i class="ring" style="--c:#509ef5"></i><span class="m">P₁ + F₁</span></span>
+          <span><i class="fill" style="--c:#509ef5"></i>pixel with a motion label</span>
+          <span><i class="fill" style="--c:#dc71c2"></i><span class="m">P̃₂</span> ground truth</span>
+          <span><i class="line" style="--c:#509ef5"></i>ring → nearest dot</span>
+          <span><i class="line" style="--c:#dc71c2"></i>dot → nearest ring</span>
+          <span><i class="line" style="--c:#e8b93b"></i>invalid match</span>
+          <span><i class="box" style="--c:#5b6b84"></i>skipped voxel</span>
+        </div>
+        <div class="chamfer-stage"><canvas id="chamfer-canvas" aria-label="Bird's-eye toy scene: frame 1's points moved by predicted flow are matched to frame 2's ground-truth points inside voxels"></canvas></div>
+        <div class="chamfer-under">
+          <div class="chamfer-read" id="chamfer-read" aria-live="polite"></div>
+          <p class="chamfer-hint" id="chamfer-hint"></p>
+        </div>
+        <div class="chamfer-bar">
+          <button class="play-btn" id="chamfer-play" aria-label="Play">
+            <svg class="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+          </button>
+          <label class="slider"><span>Training step <b id="chamfer-k">0</b></span><input class="range" type="range" id="chamfer-step" min="0" max="240" value="0"></label>
+          <div class="chamfer-foot">
+            <p class="formula"><span class="l">ℒ<sub>CD</sub></span> = Σ<sub><i>i</i></sub> <i>d</i><sub>CD</sub>( <i>V</i>(<span class="g"><i>P</i><sub>1</sub></span> + <span class="o"><i>F</i><sub>1</sub></span>, <i>i</i>), <i>V</i>(<span class="l"><i>P̃</i><sub>2</sub></span>, <i>i</i>) )</p>
+            <p class="formula small"><i>d</i><sub>CD</sub>(<i>X</i>, <i>Ỹ</i>) = Σ<sub><i>x</i></sub> min<sub><i>y</i></sub> ‖<i>x</i> − <i>y</i>‖² + Σ<sub><i>y</i></sub> min<sub><i>x</i></sub> ‖<i>x</i> − <i>y</i>‖², and 0 if either set is empty</p>
           </div>
         </div>
+        <p class="res-note">Drawn coarse for legibility. Training uses 1000 voxels per axis, and <span class="m">ℒ<sub>CD</sub></span> is ramped in (<span class="m">λ</span> from 0 to 4 on a sigmoid schedule) only once the point maps are accurate.</p>
+      </div>
+
+      <div class="train-foot reveal">
+        <span class="chip l"><span class="k">Ablation</span><span>without <span class="m">ℒ<sub>CD</sub></span>: <b>6.3×</b> object-flow error, <b>2×</b> point-map error <span class="s">· Waymo</span></span></span>
+        <p><b>Data</b> · static: WildRGBD, BlendedMVS · dynamic: Waymo, Kubric-F, Spring, Point Odyssey. Pairs are 1 to 15 frames apart; training runs 200 epochs.</p>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <!-- TODO: Add your video file path here -->
-      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video> -->
-      <!-- TODO: Replace with your video description -->
-      <img src="static/images/teaser.png" width="100%" alt="Teaser image"/>
-      <h2 class="subtitle has-text-centered" style="text-align: justify !important;">
-        SM4RT performs <text style="color: rgb(0, 230, 230);">Geometry Reconstruction</text> and <text style="color: red;">Object Flow Estimation</text> from image pairs via first recovering 3D geometry and then bootstrapping motion estimation from the predicted structure.
-      </h2>
+<!-- ============================================================ citation -->
+<section class="section tight alt" id="citation">
+  <div class="wrap wide">
+    <div class="sec-head reveal">
+      <p class="kicker">Citation</p>
     </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            We introduce SM4RT, a multi-task cascade feed-forward model for dynamic scene reconstruction from RGB videos. While existing feed-forward approaches typically address geometry reconstruction and motion estimation separately -- and often predict motions in a single coordinate frame that must account for camera movement -- SM4RT solves these tasks sequentially by first reconstructing 3D geometry and then bootstrapping motion estimation from the predicted structure. By expressing each pixel's 3D motion in its corresponding camera frame, SM4RT reduces ambiguity arising from camera motion. To address the sparsity of real-world motion labels, SM4RT further incorporates a weakly supervised loss that regularizes unlabeled point motions using labeled point positions at the other time step. We evaluate motion estimation on three dynamic-scene datasets -- Kubric, Waymo, and Point Odyssey -- and SM4RT achieves the best performance on most metrics compared with prior baselines. We additionally benchmark geometry reconstruction on five dynamic scene datasets and show that SM4RT achieves competitive performance with state-of-the-art methods. Overall, our unified framework demonstrates that combining geometry reconstruction and motion estimation in a cascade not only avoids performance trade-offs but also enhances motion estimation through improved geometric reasoning.
-          </p>
+    <div class="cite-grid">
+      <div class="bibtex card reveal" id="BibTeX">
+        <div class="bibtex-header">
+          <span>BibTeX</span>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            <span class="copy-text">Copy</span>
+          </button>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-<section class="section hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3" style="text-align: center;">Model Architecture</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="item">
-            <img style="width: 100%;" src="static/images/method.png" alt="Model Architecture" loading="lazy"/>
-            <h2 class="subtitle has-text-centered" style="text-align: justify !important; margin-top: 1rem;">
-              SM4RT first performs geometry reconstruction using a DUSt3R backbone (<text style="color: blue;">blue</text> modules), then feeds the predicted 3D geometry into a transformer-based decoder followed by a DPT head to estimate motion (<text style="color: red;">red</text> modules). The network is trained with a fully-supervised regression loss and a weakly-supervised Chamfer loss.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3" style="text-align: center;">Result Visualizations</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="viz-container">
-            <div class="viz-card">
-                <div class="viz-grid">
-                    <div class="col-images">
-                        <div class="img-block">
-                            <img src="static/visualizations/wl98/view1.png" alt="Start View">
-                            <div class="label-text">View 1</div>
-                        </div>
-                        <div class="img-block">
-                            <img src="static/visualizations/wl98/view2.png" alt="Target View">
-                            <div class="label-text">View 2</div>
-                        </div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/wl98/forward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Forward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Forward Flow</div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/wl98/backward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Backward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Backward Flow</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="viz-container">
-            <div class="viz-card">
-                <div class="viz-grid">
-                    <div class="col-images">
-                        <div class="img-block">
-                            <img src="static/visualizations/w8/view1.png" alt="Start View">
-                            <div class="label-text">View 1</div>
-                        </div>
-                        <div class="img-block">
-                            <img src="static/visualizations/w8/view2.png" alt="Target View">
-                            <div class="label-text">View 2</div>
-                        </div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/w8/forward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Forward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Forward Flow</div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/w8/backward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Backward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Backward Flow</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="viz-container">
-            <div class="viz-card">
-                <div class="viz-grid">
-                    <div class="col-images">
-                        <div class="img-block">
-                            <img src="static/visualizations/w18/view1.png" alt="Start View">
-                            <div class="label-text">View 1</div>
-                        </div>
-                        <div class="img-block">
-                            <img src="static/visualizations/w18/view2.png" alt="Target View">
-                            <div class="label-text">View 2</div>
-                        </div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/w18/forward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Forward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Forward Flow</div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/w18/backward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Backward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Backward Flow</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="viz-container">
-            <div class="viz-card">
-                <div class="viz-grid">
-                    <div class="col-images">
-                        <div class="img-block">
-                            <img src="static/visualizations/w74/view1.png" alt="Start View">
-                            <div class="label-text">View 1</div>
-                        </div>
-                        <div class="img-block">
-                            <img src="static/visualizations/w74/view2.png" alt="Target View">
-                            <div class="label-text">View 2</div>
-                        </div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/w74/forward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Forward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Forward Flow</div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/w74/backward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Backward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Backward Flow</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="viz-container">
-            <div class="viz-card">
-                <div class="viz-grid">
-                    <div class="col-images">
-                        <div class="img-block">
-                            <img src="static/visualizations/p3/view1.png" alt="Start View">
-                            <div class="label-text">View 1</div>
-                        </div>
-                        <div class="img-block">
-                            <img src="static/visualizations/p3/view2.png" alt="Target View">
-                            <div class="label-text">View 2</div>
-                        </div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/p3/forward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Forward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Forward Flow</div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/p3/backward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Backward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Backward Flow</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="viz-container">
-            <div class="viz-card">
-                <div class="viz-grid">
-                    <div class="col-images">
-                        <div class="img-block">
-                            <img src="static/visualizations/p22/view1.png" alt="Start View">
-                            <div class="label-text">View 1</div>
-                        </div>
-                        <div class="img-block">
-                            <img src="static/visualizations/p22/view2.png" alt="Target View">
-                            <div class="label-text">View 2</div>
-                        </div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/p22/forward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Forward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Forward Flow</div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/p22/backward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Backward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Backward Flow</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="viz-container">
-            <div class="viz-card">
-                <div class="viz-grid">
-                    <div class="col-images">
-                        <div class="img-block">
-                            <img src="static/visualizations/k5/view1.png" alt="Start View">
-                            <div class="label-text">View 1</div>
-                        </div>
-                        <div class="img-block">
-                            <img src="static/visualizations/k5/view2.png" alt="Target View">
-                            <div class="label-text">View 2</div>
-                        </div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/k5/forward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Forward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Forward Flow</div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/k5/backward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Backward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Backward Flow</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="viz-container">
-            <div class="viz-card">
-                <div class="viz-grid">
-                    <div class="col-images">
-                        <div class="img-block">
-                            <img src="static/visualizations/k26/view1.png" alt="Start View">
-                            <div class="label-text">View 1</div>
-                        </div>
-                        <div class="img-block">
-                            <img src="static/visualizations/k26/view2.png" alt="Target View">
-                            <div class="label-text">View 2</div>
-                        </div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/k26/forward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Forward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Forward Flow</div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/k26/backward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Backward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Backward Flow</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="viz-container">
-            <div class="viz-card">
-                <div class="viz-grid">
-                    <div class="col-images">
-                        <div class="img-block">
-                            <img src="static/visualizations/k28/view1.png" alt="Start View">
-                            <div class="label-text">View 1</div>
-                        </div>
-                        <div class="img-block">
-                            <img src="static/visualizations/k28/view2.png" alt="Target View">
-                            <div class="label-text">View 2</div>
-                        </div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/k28/forward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Forward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Forward Flow</div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/k28/backward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Backward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Backward Flow</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-
-          <div class="viz-container">
-            <div class="viz-card">
-                <div class="viz-grid">
-                    <div class="col-images">
-                        <div class="img-block">
-                            <img src="static/visualizations/k33/view1.png" alt="Start View">
-                            <div class="label-text">View 1</div>
-                        </div>
-                        <div class="img-block">
-                            <img src="static/visualizations/k33/view2.png" alt="Target View">
-                            <div class="label-text">View 2</div>
-                        </div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/k33/forward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Forward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Forward Flow</div>
-                    </div>
-                    <div class="col-model">
-                        <div class="model-wrapper">
-                            <model-viewer 
-                                src="static/visualizations/k33/backward.glb"
-                                camera-controls 
-                                shadow-intensity="0"
-                                camera-orbit="auto auto 70%"
-                                alt="3D Backward Flow">
-                            </model-viewer>
-                        </div>
-                        <div class="label-text">Backward Flow</div>
-                    </div>
-                </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Image carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section> -->
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End video carousel -->
-
-
-
-
-
-<!-- Paper poster -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section> -->
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={SM4RT: Cascaded Feed-forward Model for 4D Reconstruction},
-  author={Pang-Chi Lo and Jhao-Syun Lai and Tsung-Wei Ke},
-  institution={Carnegie Mellon University and National Taiwan University},
-  journal={Conference/Journal Name},
-  year={2026},
-  url={https://your-domain.com/your-project-page}
+<pre id="bibtex-code"><code>@inproceedings{lo2026sm4rt,
+  title     = {SM4RT: Cascaded Feed-forward Model for 4D Reconstruction},
+  author    = {Lo, Pang-Chi and Lai, Jhao-Syun and Ke, Tsung-Wei},
+  booktitle = {British Machine Vision Conference (BMVC)},
+  year      = {2026}
 }</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
+      </div>
+      <div class="ack card reveal">
+        <h3>Acknowledgements</h3>
+        <p>Supported by the AMD University Program AI &amp; HPC Cluster and NSTC Taiwan (115-2634-F-002-012, 115-2634-F-002-001). We thank Kuo-Guang Tsai for support on the AMD cluster. Funding to attend this conference was provided by the CMU GSA/Provost Conference Funding.</p>
       </div>
     </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap wide">
+    <span class="wordmark">SM4RT</span>
+    <p>
+      This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.
+      You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+<button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 15 6-6 6 6"/></svg>
+</button>
 
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
